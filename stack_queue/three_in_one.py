@@ -31,3 +31,6 @@ class ThreeInOne:
             return False
         else:
             return self.stacks[stack_num].pop()
+
+    def remove_all_stacks(self):
+        self.stacks = [[]] * self.capacity

@@ -44,3 +44,12 @@ class TestThreeInOne:
     def test_pop_value_from_stack(self, three_in_one):
         three_in_one.add_value_to_stack(stack_num=0 , value=5)
         assert three_in_one.pop_value_from_stack(stack_num=0) == 5
+
+    def test_remove_all_stacks(self, three_in_one):
+        three_in_one.add_value_to_stack(stack_num=0 , value=5)
+        three_in_one.add_value_to_stack(stack_num=1 , value=5)
+        three_in_one.add_value_to_stack(stack_num=2 , value=5)
+        three_in_one.remove_all_stacks()
+        assert three_in_one.stack_is_empty(stack_num=0) == True
+        assert three_in_one.stack_is_empty(stack_num=1) == True
+        assert three_in_one.stack_is_empty(stack_num=2) == True
