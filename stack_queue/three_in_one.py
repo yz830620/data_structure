@@ -30,4 +30,4 @@ class ThreeInOne:
             print('empty stack, method not allow')
             return False
         else:
-            self.stacks[stack_num].pop()
+            return self.stacks[stack_num].pop()
