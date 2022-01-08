@@ -1,0 +1,13 @@
+import pytest
+from three_in_one import ThreeInOne
+
+@pytest.fixture
+def three_in_one():
+    return ThreeInOne()
+
+
+class TestThreeInOne:
+    """class for practicing test driven design"""
+    def test_three_in_one(three_in_one):
+        assert three_in_one is not None
+
