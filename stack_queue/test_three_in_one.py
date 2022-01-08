@@ -1,6 +1,5 @@
 import pytest
 from three_in_one import ThreeInOne
-
 @pytest.fixture
 def three_in_one():
     return ThreeInOne(3)
@@ -32,4 +31,11 @@ class TestThreeInOne:
         three_in_one.add_value_to_stack(stack_num=0 , value=5)
         three_in_one.add_value_to_stack(stack_num=0 , value=5)
         assert three_in_one.stack_is_full(stack_num=0) == True
+
+    def test_full_can_not_add_value(self, three_in_one):
+        three_in_one.add_value_to_stack(stack_num=0 , value=5)
+        three_in_one.add_value_to_stack(stack_num=0 , value=5)
+        three_in_one.add_value_to_stack(stack_num=0 , value=5)
+        assert three_in_one.add_value_to_stack(stack_num=0 , value=5) == False
+        
         

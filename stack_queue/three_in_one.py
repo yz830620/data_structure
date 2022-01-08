@@ -1,6 +1,3 @@
-
-
-
 class ThreeInOne:
     def __init__(self, stack_qty, capacity=3):
         self.stack_qty = stack_qty
@@ -21,4 +18,9 @@ class ThreeInOne:
             return False
 
     def add_value_to_stack(self, stack_num, value):
-        self.stacks[stack_num].append(value)
+        if not self.stack_is_full(stack_num):
+            self.stacks[stack_num].append(value)
+            return True
+        else:
+            print('Stack is full, not process')
+            return False
