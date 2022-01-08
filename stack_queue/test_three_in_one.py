@@ -12,4 +12,6 @@ class TestThreeInOne:
         assert three_in_one is not None
 
     def test_stack_is_empty(self, three_in_one):
-        assert three_in_one.is_empty() == True
+        assert three_in_one.stack_is_empty(stack_num=3) == True
+
+    
