@@ -8,6 +8,8 @@ def three_in_one():
 
 class TestThreeInOne:
     """class for practicing test driven design"""
-    def test_three_in_one(three_in_one):
+    def test_three_in_one(self, three_in_one):
         assert three_in_one is not None
 
+    def test_stack_is_empty(self, three_in_one):
+        assert three_in_one.is_empty() == True
