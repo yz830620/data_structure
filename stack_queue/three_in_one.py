@@ -7,7 +7,10 @@ class ThreeInOne:
         self.stacks = [[]] * stack_qty
 
     def stack_is_empty(self, stack_num):
-        return True
+        if self.stacks[stack_num]:
+            return False
+        else:
+            return True
 
     def stack_is_full(self, stack_num):
         return False
