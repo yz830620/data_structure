@@ -24,3 +24,10 @@ class ThreeInOne:
         else:
             print('Stack is full, not process')
             return False
+    
+    def pop_value_from_stack(self, stack_num):
+        if self.stack_is_empty(stack_num):
+            print('empty stack, method not allow')
+            return False
+        else:
+            self.stacks[stack_num].pop()
